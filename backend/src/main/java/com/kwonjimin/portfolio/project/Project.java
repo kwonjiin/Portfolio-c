@@ -23,7 +23,7 @@ import lombok.Setter;
 /**
  * 프로젝트 한 개를 나타내는 엔티티
  *
- * techStacks / imageUrls / troubleshootings 는 리스트(여러 개)인 필드입니다.
+ * techStacks / imageUrls / troubleshootings 는 리스트(여러 개)인 필드
  * @ElementCollection : Project 하나당 여러 값을 저장할 수 있는 별도의 테이블을 만들어주는 jpa어노테이션
  * (project_tech_stacks, project_images, project_troubleshootings)
  * Java 리스트처럼 다루기
@@ -63,7 +63,7 @@ public class Project {
     // fetch = EAGER: Project를 조회하는 즉시 이 리스트들도 함께 조회
     // LAZY로 두면, Controller에서 값을 꺼내 쓰려는 시점에는
     //  DB세션이 이미 끝나버려서 "LazyInitializationException" 오류
-    //  프로젝트 개수가 몇 개 안 되는 포트폴리오 사이트라 EAGER로도 성능 문제가 없습니다.
+    //  프로젝트 개수가 몇 개 안 되는 포트폴리오 사이트라 EAGER로도 성능 문제없음
     @Builder.Default
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "project_tech_stacks", joinColumns = @JoinColumn(name = "project_id"))

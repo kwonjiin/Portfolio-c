@@ -167,7 +167,7 @@ public class DataInitializer implements CommandLineRunner {
                 .teamType(TeamType.SOLO)
                 .teamSize(null)
                 .myRole("기획부터 백엔드/프론트엔드 개발, 배포까지 전 과정을 개인적으로 진행했습니다. "
-                        + "Claude(AI 코딩 어시스턴트)와 페어 프로그래밍하며 개발 속도를 높였습니다.")
+                        + "Claude와 페어 프로그래밍하며 개발 속도를 높였습니다.")
                 .githubUrl("https://github.com/kwonjiin/Azaaza")
                 .deployUrl(null)
                 .displayOrder(1)
@@ -262,8 +262,8 @@ public class DataInitializer implements CommandLineRunner {
         // --- 5) 이 포트폴리오 ---
         Project portfolio = Project.builder()
                 .title("권지민 포트폴리오")
-                .summary("지금 보고 있는 이 포트폴리오 웹사이트입니다. Claude(AI 코딩 어시스턴트)와 페어 프로그래밍하며 개발 속도를 높였습니다.")
-                .period("2026.09 - 진행중")
+                .summary("지금 보고 있는 이 포트폴리오 웹사이트입니다. Claude와 페어 프로그래밍하며 개발 속도를 높였습니다.")
+                .period("2026.09")
                 .teamType(TeamType.SOLO)
                 .teamSize(null)
                 .myRole("기획, 백엔드/프론트엔드 개발, 배포까지 전 과정을 1인으로 진행했습니다. "
