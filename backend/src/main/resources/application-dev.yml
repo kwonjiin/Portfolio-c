@@ -1,0 +1,18 @@
+# 개발용(로컬 컴퓨터에서 실행할 때) 설정입니다.
+# 로컬에 설치된 MySQL(MariaDB)의 portfolio_dev 데이터베이스를 사용합니다.
+# 미리 아래 계정/DB가 만들어져 있어야 합니다.
+#   DB: portfolio_dev
+#   계정: portfolio_user / portfolio1234!
+
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/portfolio_dev?useSSL=false&characterEncoding=UTF-8
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: portfolio_user
+    password: portfolio1234!
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # 엔티티(Java 클래스) 기준으로 테이블을 자동으로 만들어/수정해줍니다.
+    show-sql: true        # 콘솔에 실제 실행되는 SQL을 보여줍니다. (공부하기 좋음)
+    open-in-view: false

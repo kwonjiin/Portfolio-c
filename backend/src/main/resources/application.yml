@@ -1,0 +1,12 @@
+# 공통 설정 파일입니다.
+# profiles.active 값에 따라 application-dev.yml(개발용) 또는
+# application-prod.yml(배포용) 설정이 추가로 적용됩니다.
+
+spring:
+  application:
+    name: portfolio-backend
+  profiles:
+    active: dev
+
+server:
+  port: 8080
