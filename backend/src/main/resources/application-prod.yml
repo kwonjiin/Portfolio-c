@@ -1,12 +1,3 @@
-# 배포용(Render 같은 실제 서버에 올릴 때) 설정입니다.
-# ${...} 로 되어있는 값들은 코드에 직접 쓰지 않고, 서버의 "환경 변수"에서 읽어옵니다.
-# 비밀번호 같은 값을 코드에 그대로 적으면 깃허브에 노출되기 때문에 이렇게 분리합니다.
-#
-# Render 대시보드 > Environment 탭에서 아래 3개 값을 등록해주면 됩니다.
-#   DB_URL      예) jdbc:mariadb://호스트주소:3306/portfolio
-#   DB_USERNAME 예) portfolio_user
-#   DB_PASSWORD 예) 실제 비밀번호
-
 spring:
   datasource:
     url: ${DB_URL}

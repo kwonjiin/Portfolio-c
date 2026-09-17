@@ -4,8 +4,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Spring Boot의 기본 설정을 그대로 물려받기 위한 부모 프로젝트입니다.
-         버전, 플러그인 설정 같은 걸 우리가 하나하나 안 적어도 되게 해줍니다. -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -24,35 +22,33 @@
     </properties>
 
     <dependencies>
-        <!-- REST API(웹 서버)를 만들기 위한 기본 라이브러리 -->
+        <!-- REST API -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- JPA(자바 객체 <-> 데이터베이스 테이블 자동 매핑)를 쓰기 위한 라이브러리 -->
+        <!-- JPA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
-        <!-- DB: MySQL/MariaDB (로컬 개발 + Render 배포 모두 동일하게 사용)
-             mysql-connector-j는 로컬 MariaDB의 INFORMATION_SCHEMA 구조 차이로 오류가 나서
-             MySQL/MariaDB 양쪽 다 호환되는 mariadb-java-client를 사용합니다. -->
+        <!-- DB: MySQL/MariaDB -->
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
             <artifactId>mariadb-java-client</artifactId>
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Lombok: @Getter, @Setter 같은 반복되는 코드를 어노테이션 하나로 자동 생성해주는 도구 -->
+        <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
 
-        <!-- 코드 수정 후 서버 자동 재시작 (개발할 때 편하게 해주는 도구) -->
+        <!-- 코드 수정 후 서버 자동 재시작  -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
