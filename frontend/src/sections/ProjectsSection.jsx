@@ -3,7 +3,6 @@ import StatusMessage from "../components/StatusMessage.jsx";
 import GroupBox from "../components/GroupBox.jsx";
 import ProjectListItem from "../components/ProjectListItem.jsx";
 
-// 프로젝트 목록을 탐색기 "자세히 보기"처럼 보여줍니다.
 export default function ProjectsSection() {
   const { data, loading, error } = useFetch("/api/projects");
 

@@ -1,4 +1,4 @@
-// 클래식 메뉴 바입니다. 실제 드롭다운은 없고, 그 시절 창처럼 보이기 위한 장식입니다.
+// 클래식 메뉴 바. 실제 드롭다운은 없고, 뭔가 그 시절 창처럼
 const MENUS = ["File", "Edit", "View", "Favorites", "Tools", "Help"];
 
 export default function MenuBar() {

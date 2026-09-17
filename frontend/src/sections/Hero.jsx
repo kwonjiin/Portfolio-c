@@ -4,7 +4,6 @@ function scrollToProjects() {
   document.getElementById("projects")?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-// 창을 열었을 때 맨 처음 보이는 짧은 인사말입니다.
 export default function Hero() {
   return (
     <section className="px-4 pb-2 pt-6">

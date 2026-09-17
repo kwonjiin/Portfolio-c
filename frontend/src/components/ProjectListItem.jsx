@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FileCode2 } from "lucide-react";
 
-// 프로젝트 하나를 탐색기의 "자세히" 보기 목록 한 줄처럼 보여줍니다.
+// 프로젝트 하나를 탐색기의 "자세히" 보기 목록 한 줄처럼 보이게
 export default function ProjectListItem({ project }) {
   const { id, title, period, techStacks } = project;
 

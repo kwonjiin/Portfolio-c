@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { apiClient } from "../api/client.js";
 
-// "API 호출 + 로딩중 + 에러" 상태를 한 번에 관리해주는 훅입니다.
-// 사용법: const { data, loading, error } = useFetch("/api/about");
+// "API 호출, 로딩중, 에러 상태를 한 번에 관리
 export function useFetch(path) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -23,7 +22,7 @@ export function useFetch(path) {
         if (active) setLoading(false);
       });
 
-    // path가 바뀌기 전에 컴포넌트가 사라지면, 이미 끝난 요청 결과를 state에 반영하지 않도록 막습니다.
+    // path 바뀌기 전에 컴포넌트가 사라진다? 이미 끝난 요청 결과를 state에 반영하지 않도록 막어라
     return () => {
       active = false;
     };

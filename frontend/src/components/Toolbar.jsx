@@ -5,8 +5,8 @@ import { useActiveSection } from "../hooks/useActiveSection.js";
 const SECTION_LABELS = { about: "About", projects: "Projects", skills: "Skills", experience: "Experience", contact: "Contact" };
 const SECTION_IDS = Object.keys(SECTION_LABELS);
 
-// Windows 탐색기 툴바처럼 뒤로/앞으로/홈 버튼과 "주소창"을 보여줍니다.
-// 뒤로/앞으로는 실제 브라우저 히스토리를 사용하는 진짜 기능입니다.
+//  뒤로, 앞으로, 홈 버튼주소창
+// 뒤로, 앞으로만 진짜
 export default function Toolbar() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -19,7 +19,7 @@ export default function Toolbar() {
       ? "내 포트폴리오 > Projects > 상세보기"
       : "내 포트폴리오";
 
-  // 이미 홈이면 페이지 이동 대신 맨 위로 스크롤합니다. (같은 주소로 navigate 하면 아무 일도 안 일어나기 때문)
+  // 맨 위로 스크롤
   const handleHome = () => {
     if (isHome) {
       document.getElementById("app-viewport")?.scrollTo({ top: 0, behavior: "smooth" });

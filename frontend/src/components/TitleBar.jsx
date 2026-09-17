@@ -1,6 +1,6 @@
 import { Minus, Square, X } from "lucide-react";
 
-// 창 맨 위의 파란 타이틀 바입니다. 최소화/최대화/닫기 버튼은 순전히 장식용입니다.
+// 창 맨 위의 파란 타이틀 바
 export default function TitleBar() {
   return (
     <div className="win-titlebar flex h-7 items-center justify-between px-1.5">

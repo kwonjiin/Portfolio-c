@@ -3,7 +3,7 @@ import StatusMessage from "../components/StatusMessage.jsx";
 import GroupBox from "../components/GroupBox.jsx";
 import FieldRow from "../components/FieldRow.jsx";
 
-// "시스템 속성" 창을 떠올리게 하는 구성으로 자기소개를 보여줍니다.
+// 자기소개
 export default function AboutSection() {
   const { data, loading, error } = useFetch("/api/about");
 

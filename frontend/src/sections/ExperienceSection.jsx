@@ -2,7 +2,7 @@ import { useFetch } from "../hooks/useFetch.js";
 import StatusMessage from "../components/StatusMessage.jsx";
 import GroupBox from "../components/GroupBox.jsx";
 
-// 교육사항(기간이 있음)과 수상내역(기간 정보가 없음)을 하나의 목록 상자로 보여줍니다.
+// 교육사항, 수상내역 하나의 목록 상자로
 export default function ExperienceSection() {
   const { data, loading, error } = useFetch("/api/about");
 

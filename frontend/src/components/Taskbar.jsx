@@ -19,7 +19,7 @@ function useClock() {
   return now;
 }
 
-// 화면 맨 아래 고정된 작업표시줄입니다. Start 메뉴, 섹션 바로가기, 시계로 구성됩니다.
+// 화면 맨 아래 고정된 작업표시줄. Start 메뉴, 섹션 바로가기, 시계
 export default function Taskbar({ onShutDown }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();

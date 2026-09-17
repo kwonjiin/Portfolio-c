@@ -5,8 +5,7 @@ import ProjectImage from "../components/ProjectImage.jsx";
 import GroupBox from "../components/GroupBox.jsx";
 import Win2kButton from "../components/Win2kButton.jsx";
 
-// 프로젝트 상세 페이지입니다. 별도의 단건 조회 API가 없어서, 목록(/api/projects)을
-// 그대로 받아온 뒤 주소의 id와 일치하는 프로젝트 하나를 찾아서 보여줍니다.
+// 프로젝트 상세 페이지
 export default function ProjectDetail() {
   const { id } = useParams();
   const { data, loading, error } = useFetch("/api/projects");

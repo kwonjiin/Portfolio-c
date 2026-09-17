@@ -1,12 +1,5 @@
 import { useState } from "react";
 
-/**
- * 프로젝트 사진 한 장을 보여주는 컴포넌트입니다.
- * 아직 실제 이미지 파일을 넣지 않았거나 경로가 잘못된 경우, "no image" 텍스트만 보여줍니다.
- *
- * 실제 사진을 추가하려면 frontend/public/images/projects/ 폴더에
- * 백엔드 DataInitializer.java 에서 지정한 파일 이름 그대로 넣어주시면 됩니다.
- */
 export default function ProjectImage({ src, alt }) {
   const [failed, setFailed] = useState(false);
 

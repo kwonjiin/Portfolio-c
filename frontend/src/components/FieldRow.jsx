@@ -1,4 +1,4 @@
-// "라벨 + 읽기전용 입력창" 한 줄입니다. About/Contact 등에서 재사용합니다.
+// About/Contact 등에서 재사용
 export default function FieldRow({ label, children }) {
   return (
     <div className="mb-2.5 flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">

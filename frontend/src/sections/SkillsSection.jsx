@@ -2,11 +2,10 @@ import { useFetch } from "../hooks/useFetch.js";
 import StatusMessage from "../components/StatusMessage.jsx";
 import GroupBox from "../components/GroupBox.jsx";
 
-// 백엔드 카테고리(BACKEND 등)를 화면에 보여줄 라벨과 순서로 바꿔줍니다.
 const CATEGORY_LABELS = { BACKEND: "Backend", FRONTEND: "Frontend", DB: "Database", TOOL: "Tool", CICD: "CI / CD" };
 const CATEGORY_ORDER = ["BACKEND", "FRONTEND", "DB", "TOOL", "CICD"];
 
-// 기술스택을 "구성 요소 설치" 마법사의 체크리스트처럼 보여줍니다.
+// 기술스택 체크리스트
 export default function SkillsSection() {
   const { data, loading, error } = useFetch("/api/about");
 

@@ -7,7 +7,7 @@ import FieldRow from "../components/FieldRow.jsx";
 import Win2kButton from "../components/Win2kButton.jsx";
 
 export default function ContactSection() {
-  // 백엔드의 GET /api/contact 를 호출해서 이메일/깃허브/블로그/전화번호를 받아옵니다.
+  // 백엔드 GET /api/contact 호출 - 이메일, 깃허브, 블로그, 전화번호
   const { data, loading, error } = useFetch("/api/contact");
 
   return (
