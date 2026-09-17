@@ -29,7 +29,7 @@ export default function ExperienceSection() {
                 key={award.title}
                 className="flex flex-wrap gap-x-2 border-b border-[#e0e0e0] px-2 py-1.5 text-xs last:border-0"
               >
-                <span className="w-20 shrink-0 text-winShadow">—</span>
+                <span className="w-20 shrink-0 text-winShadow">{award.period}</span>
                 <span>
                   {award.title} — {award.description}
                 </span>

@@ -18,5 +18,5 @@ public record AboutResponse(
 
     public record TrainingDto(String name, String organization, String period) {}
 
-    public record AwardDto(String title, String description) {}
+    public record AwardDto(String title, String period, String description) {}
 }

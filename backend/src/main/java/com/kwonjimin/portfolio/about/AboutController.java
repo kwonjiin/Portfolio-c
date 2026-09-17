@@ -43,7 +43,7 @@ public class AboutController {
                 .toList();
 
         List<AboutResponse.AwardDto> awards = awardRepository.findAllByOrderByDisplayOrderAsc().stream()
-                .map(a -> new AboutResponse.AwardDto(a.getTitle(), a.getDescription()))
+                .map(a -> new AboutResponse.AwardDto(a.getTitle(), a.getPeriod(), a.getDescription()))
                 .toList();
 
         
