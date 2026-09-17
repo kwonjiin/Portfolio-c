@@ -23,7 +23,8 @@ public class Award {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String title;        // 수상명 
+    private String title;        // 수상명     
+    private String period;        // 날짜 
     private String description;  // 주제/설명 
     private Integer displayOrder;
 }

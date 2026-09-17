@@ -101,11 +101,13 @@ public class DataInitializer implements CommandLineRunner {
         awardRepository.saveAll(List.of(
                 Award.builder()
                         .title("교내 학술제 최우수상")
+                        .period("2023.11")
                         .description("최적 알고리즘을 이용한 자동제어시스템")
                         .displayOrder(1)
                         .build(),
                 Award.builder()
                         .title("기업분석경진대회 우수상")
+                        .period("2022.12")
                         .description("삼성디스플레이 기업분석")
                         .displayOrder(2)
                         .build()
@@ -161,7 +163,7 @@ public class DataInitializer implements CommandLineRunner {
                 .title("아자아자 (Azaaza)")
                 .summary("목표를 등록하고 매일 인증하며 서로 응원하는 습관 형성 SNS 서비스입니다. "
                         + "사용자가 목표를 세우고 매일 인증샷을 올리면, 팔로워들이 '아자아자' 버튼으로 응원을 보낼 수 있습니다.")
-                .period("2024.09 - 2024.12")
+                .period("2026.09 - 진행중")
                 .teamType(TeamType.SOLO)
                 .teamSize(null)
                 .myRole("기획부터 백엔드/프론트엔드 개발, 배포까지 전 과정을 개인적으로 진행했습니다. "
@@ -172,16 +174,7 @@ public class DataInitializer implements CommandLineRunner {
                 .build();
         azaaza.setTechStacks(List.of("Java", "Spring Boot", "JPA", "MySQL", "React", "JavaScript", "AWS S3"));
         azaaza.setImageUrls(List.of("/images/projects/azaaza-1.jpg", "/images/projects/azaaza-2.jpg"));
-        azaaza.setTroubleshootings(List.of(
-                Troubleshooting.builder()
-                        .issue("사용자들이 올리는 인증 이미지 용량이 커서 서버 업로드 속도가 느려지고 서버 디스크 용량 부담도 커짐")
-                        .solution("이미지를 서버가 직접 받지 않고, 클라이언트가 AWS S3에 바로 업로드할 수 있는 Presigned URL 방식으로 변경해 서버 부담과 업로드 시간을 줄임")
-                        .build(),
-                Troubleshooting.builder()
-                        .issue("매일 정해진 시간에 인증 알림을 보내는 스케줄러가 서버 재시작 시 중복 실행되어 알림이 두 번씩 발송되는 문제")
-                        .solution("알림 발송 기록을 DB에 저장해두고, 스케줄러 실행 시 오늘 이미 발송했는지 확인 후 중복 발송을 막는 로직을 추가")
-                        .build()
-        ));
+        
         projectRepository.save(azaaza);
 
         // --- 2) 다구독다구독 ---
@@ -269,13 +262,12 @@ public class DataInitializer implements CommandLineRunner {
         // --- 5) 이 포트폴리오 ---
         Project portfolio = Project.builder()
                 .title("권지민 포트폴리오")
-                .summary("지금 보고 있는 이 포트폴리오 웹사이트입니다. 백엔드 API와 프론트엔드 화면을 직접 설계하고 구현했습니다.")
+                .summary("지금 보고 있는 이 포트폴리오 웹사이트입니다. Claude(AI 코딩 어시스턴트)와 페어 프로그래밍하며 개발 속도를 높였습니다.")
                 .period("2026.09 - 진행중")
                 .teamType(TeamType.SOLO)
                 .teamSize(null)
                 .myRole("기획, 백엔드/프론트엔드 개발, 배포까지 전 과정을 1인으로 진행했습니다. "
                         + "프론트엔드는 Vercel, 백엔드는 Render에 배포했습니다.")
-                // TODO: 실제 깃허브 레포 주소로 교체해주세요.
                 .githubUrl("https://github.com/kwonjiin/Portfolio-c")
                 .displayOrder(5)
                 .build();
