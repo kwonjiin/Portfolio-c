@@ -1,22 +1,19 @@
 import { useParams } from "react-router-dom";
-import { useFetch } from "../hooks/useFetch.js";
-import StatusMessage from "../components/StatusMessage.jsx";
 import ProjectImage from "../components/ProjectImage.jsx";
 import GroupBox from "../components/GroupBox.jsx";
 import Win2kButton from "../components/Win2kButton.jsx";
+import { projectsData } from "../data/portfolioData.js";
 
 // 프로젝트 상세 페이지
 export default function ProjectDetail() {
   const { id } = useParams();
-  const { data, loading, error } = useFetch("/api/projects");
-  const project = data?.find((p) => String(p.id) === id);
+  const project = projectsData.find((p) => String(p.id) === id);
 
   return (
     <section className="px-4 py-6">
       <Win2kButton to="/projects">← All Projects</Win2kButton>
 
-      {(loading || error) && <StatusMessage loading={loading} error={error} />}
-      {data && !project && <p className="mt-4 text-xs">프로젝트를 찾을 수 없습니다.</p>}
+      {!project && <p className="mt-4 text-xs">프로젝트를 찾을 수 없습니다.</p>}
 
       {project && (
         <div className="mt-4">
