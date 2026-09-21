@@ -26,13 +26,13 @@ Windows 2000을 테마로 만든 개발자 권지민의 포트폴리오 웹사�
 
 ```
 Portfolio-c/
-├── backend/   # Spring Boot + JPA API 서버 (자세한 설명: backend/README.md)
+├── backend/   # Spring Boot + JPA API 서버 
 └── frontend/  # React + Tailwind CSS 화면
 ```
 
 ## 로컬에서 실행하기
 
-두 서버를 각각 켜야 합니다 (터미널 2개 필요). 백엔드는 로컬 MySQL(또는 MariaDB)이 필요합니다 — 최초 1회 설정은 `backend/README.md`를 참고하세요.
+두 서버를 각각 켜야 합니다 (터미널 2개 필요). 백엔드는 로컬 MySQL(또는 MariaDB)이 필요합니다
 
 ```bash
 # 1) 백엔드 (http://localhost:8080)
